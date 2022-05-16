@@ -8,5 +8,11 @@ describe('Game', () => {
     const game = new Game();
     game.buy(1);
     expect(game.price).toBe(100);
-});
+  });
+  test('buy two potter', () => {
+    const game = new Game();
+    game.buy(1);
+    game.buy(2);
+    expect(game.price).toBe(190);
+  });
 });
