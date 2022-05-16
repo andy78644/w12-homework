@@ -15,4 +15,13 @@ describe('Game', () => {
     game.buy(2);
     expect(game.price).toBe(190);
   });
+  test('buy all potter', () => {
+    const game = new Game();
+    game.buy(1);
+    game.buy(2);
+    game.buy(3);
+    game.buy(4);
+    game.buy(5);
+    expect(game.price).toBe(375);
+  });
 });
