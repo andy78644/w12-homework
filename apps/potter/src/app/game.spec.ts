@@ -31,5 +31,14 @@ describe('Game', () => {
     game.buy(2, 2);
     expect(game.price).toBe(290);
   });
+  test('buy in edge cast', () => {
+    const game = new Game();
+    game.buy(1, 5);
+    game.buy(2, 5);
+    game.buy(3, 4);
+    game.buy(4, 5);
+    game.buy(5, 4);
+    expect(game.price).toBe(1770);
+  });
   
 });
