@@ -3,10 +3,12 @@ export class Game {
     private book = 0;
     private total_book = 0;
     private count: number [] = [0, 0, 0, 0, 0, 0];
-    buy(pins: number){
+    buy(pins: number, n: number){
         //this.total_price += 100;
-        this.count[pins]++;
-        this.total_book++;
+        for(let index = 0;index<n;index++){
+            this.count[pins]++;
+            this.total_book++;
+        }
     }
     private test = 2;
     get price(){
