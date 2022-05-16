@@ -24,4 +24,11 @@ describe('Game', () => {
     game.buy(5);
     expect(game.price).toBe(375);
   });
+  test('buy one potter 1 and two potter 2', () => {
+    const game = new Game();
+    game.buy(1);
+    game.buy(2);
+    game.buy(2);
+    expect(game.price).toBe(290);
+  });
 });
